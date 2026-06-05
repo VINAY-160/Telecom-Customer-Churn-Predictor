@@ -35,7 +35,7 @@ st.markdown("""
 @st.cache_resource
 def load_model_data():
     """Loads the pickled model, feature list, and threshold."""
-    model_path = 'best_churn_model.pkl'
+    model_path = 'Customer-Churn-Telecom-Predictor/best_churn_model.pkl'
     if not os.path.exists(model_path):
         return None
     
