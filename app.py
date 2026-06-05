@@ -3,6 +3,11 @@ import pandas as pd
 import numpy as np
 import pickle
 import os
+import joblib
+
+model = joblib.load(
+    "best_churn_model.joblib"
+)
 
 # ==========================================
 # 1. PAGE CONFIGURATION & STYLING
@@ -35,7 +40,7 @@ st.markdown("""
 @st.cache_resource
 def load_model_data():
     """Loads the pickled model, feature list, and threshold."""
-    model_path = 'Customer-Churn-Telecom-Predictor/best_churn_model.pkl'
+    model_path = 'best_churn_model.pkl'
     if not os.path.exists(model_path):
         return None
     
