@@ -3,11 +3,6 @@ import pandas as pd
 import numpy as np
 import pickle
 import os
-import joblib
-
-model = joblib.load(
-    "best_churn_model.joblib"
-)
 
 # ==========================================
 # 1. PAGE CONFIGURATION & STYLING
